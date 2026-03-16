@@ -1,0 +1,12 @@
+# Local env/config files
+Backend/SignupForm/SignupForm/src/main/resources/application-local.properties
+Frontend/.env
+Frontend/.env.local
+Frontend/.env.development.local
+Frontend/.env.test.local
+Frontend/.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
