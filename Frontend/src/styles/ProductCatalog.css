@@ -1,0 +1,197 @@
+/* ===============================
+   PAGE LAYOUT
+=================================*/
+
+.catalog-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding-bottom: 40px;
+}
+
+.loading-text,
+.error-line {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.error-line {
+  color: #e53935;
+}
+
+/* ===============================
+   PRODUCT GRID
+=================================*/
+
+.product-grid {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+/* ===============================
+   PRODUCT CARD
+=================================*/
+
+.product-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ===============================
+   PRODUCT IMAGE
+=================================*/
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+/* ===============================
+   PRODUCT BODY
+=================================*/
+
+.product-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #212121;
+  margin: 0;
+}
+
+.product-body p {
+  font-size: 14px;
+  color: #757575;
+  margin: 0;
+}
+
+.product-body strong {
+  font-size: 18px;
+  color: #2e7d32;
+  margin-top: 4px;
+}
+
+/* ===============================
+   ADD TO CART BUTTON
+=================================*/
+
+.product-body button {
+  margin-top: 10px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  background: #2874f0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-body button:hover {
+  background: #1c5ed6;
+}
+
+/* ===============================
+   QUANTITY CONTROL
+=================================*/
+
+.qty-control {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: #f5f5f5;
+  border-radius: 30px;
+  padding: 6px 12px;
+}
+
+.qty-control button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  background: #2874f0;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.qty-control button:hover {
+  background: #1c5ed6;
+}
+
+.qty-control span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ===============================
+   VIEW IMPACT LINK
+=================================*/
+
+.product-body a {
+  margin-top: 8px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #388e3c;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.product-body a:hover {
+  text-decoration: underline;
+  color: #2e7d32;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+=================================*/
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}
